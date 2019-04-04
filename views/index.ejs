@@ -4,18 +4,58 @@
     <title>PostsBook</title>
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script type="text/javascript" src="/javascripts/main.js"></script>
   </head>
   <body>
-    <nav>
-      <div>
-        <div class="logo"><a href="/">PostsBook</a></div>
-        <div class="search">
-          <input type="text" placeholder="검색">
+    <section class="main">
+      <nav>
+        <div>
+          <div class="logo"><a href="/">PostsBook</a></div>
+          <div class="search">
+            <input type="text" placeholder="검색">
+          </div>
+          <div class="panel">유저영역</div>
         </div>
-        <div class="panel">유저영역</div>
-      </div>
-    </nav>
-    <section></section>
-    <footer></footer>
+      </nav>
+      <section class="wrapper">
+        <article>
+          <div class="posts">
+            <% for(var i = 0; i < 10; i++) { %>
+              <div class="wrap">
+                <div class="post">
+                  <a href="#">
+                    <div class="img-wrap">
+                      <img src="/images/x9791186710098.jpg">
+                    </div>
+                    <div class="content-wrap">
+                      <div class="title"><h3>속 깊은 javascript</h3></div>
+                      <div class="description"><p>프론트엔드에게 추천 하하하하하하하하하하하하하하하하하하</p></div>
+                    </div>
+                  </a>
+                  <div class="content-wrap">
+                    <div class="tags">
+                        <div class="tag">web</div>
+                        <div class="tag">javascript</div>
+                        <div class="tag">javascript</div>
+                        <div class="tag">javascript</div>
+                        <div class="tag">javascript</div>
+                        </div>
+                      <div class="info">
+                        <div class="like"><i class="far fa-heart"></i> <span class="like-count">10</span></div>
+                        <div class="comment"><i class="far fa-comment"></i> <span class="comment-count">10</span></div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            <% } %>
+
+          </div>
+        </article>
+      </section>
+      <footer>
+        <div>© 2019 PostsBook</div>
+      </footer>
+    </section>  
   </body>
 </html>
